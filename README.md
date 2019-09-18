@@ -1,4 +1,4 @@
-# ThomasWasLost
+# Thomas Was Lost
 Based on the puzzle game Thomas Was Alone
 ### Commands
 - Move player 1: WASD
