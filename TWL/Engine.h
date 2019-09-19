@@ -77,6 +77,9 @@ private:
 	// Is it time for a new/first level?
 	bool m_NewLevelRequired = true;
 
+	// Was the level complete?
+	bool m_LevelCompleted = true;
+
 	// The vertex array for the level design
 	VertexArray m_VALevel;
 
@@ -93,7 +96,7 @@ private:
 	void draw();
 
 	// Load a new level
-	void loadLevel();
+	void loadLevel(bool levelCompleted);
 
 	// Detect collision
 	bool detectCollisions(PlayableCharacter& character);

@@ -24,7 +24,7 @@ public:
 
 	Vector2f getStartPosition();
 
-	int** nextLevel(VertexArray& rVaLevel);
+	int** nextLevel(VertexArray& rVaLevel, bool levelCompleted);
 
 	Vector2i getLevelSize();
 

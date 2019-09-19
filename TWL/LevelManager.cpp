@@ -10,13 +10,14 @@
 using namespace sf;
 using namespace std;
 
-int** LevelManager::nextLevel(VertexArray& rVaLevel)
+int** LevelManager::nextLevel(VertexArray& rVaLevel, bool levelCompleted)
 {
 	m_LevelSize.x = 0;
 	m_LevelSize.y = 0;
 
 	// Get the next level
-	m_CurrentLevel++;
+	if (levelCompleted)
+		m_CurrentLevel++;
 	if (m_CurrentLevel > NUM_LEVELS)
 	{
 		m_CurrentLevel = 1;

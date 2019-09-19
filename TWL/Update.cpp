@@ -10,7 +10,8 @@ void Engine::update(float dtAsSeconds)
 	if (m_NewLevelRequired)
 	{
 		// Load a level
-		loadLevel();
+		loadLevel(m_LevelCompleted);
+		m_LevelCompleted = true;
 	}
 	if (m_Playing)
 	{
@@ -53,6 +54,7 @@ void Engine::update(float dtAsSeconds)
 		if (m_TimeRemaining <= 0)
 		{
 			m_NewLevelRequired = true;
+			m_LevelCompleted = false;
 		}
 
 	}// End if playing
